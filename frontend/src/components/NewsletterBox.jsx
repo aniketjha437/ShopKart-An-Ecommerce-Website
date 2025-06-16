@@ -1,23 +1,33 @@
-import React from 'react'
-
-const NewsletterBox = () => {
-
-    const onSubmitHandler = (event) => {
-        event.preventDefault();
-    }
-
+const NewsLetter = () => {
   return (
-    <div className=' text-center'>
-      <p className='text-2xl font-medium text-gray-800'>Subscribe now & get 20% off</p>
-      <p className='text-gray-400 mt-3'>
-      Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-      </p>
-      <form onSubmit={onSubmitHandler} className='w-full sm:w-1/2 flex items-center gap-3 mx-auto my-6 border pl-3'>
-        <input className='w-full sm:flex-1 outline-none' type="email" placeholder='Enter your email' required/>
-        <button type='submit' className='bg-black text-white text-xs px-10 py-4'>SUBSCRIBE</button>
-      </form>
-    </div>
-  )
-}
+    <div className="bg-yellow-200 py-10 px-4 flex flex-col items-center text-center">
+      <div className="mb-4">
+        <h2 className="text-2xl font-semibold">Subscribe to Our Newsletter</h2>
+        <p className="text-sm text-gray-700">
+          Get updates on latest products & special offers.
+        </p>
+      </div>
 
-export default NewsletterBox
+      <form className="flex flex-col sm:flex-row items-center gap-3 w-full max-w-md">
+        <input
+          type="email"
+          placeholder="Enter your email"
+          className="px-4 py-2 rounded-md border border-gray-300 w-full flex-1"
+          required
+        />
+        <button
+          type="submit"
+          className="bg-black text-white px-6 py-2 rounded-md hover:bg-green-700 transition"
+        >
+          Subscribe
+        </button>
+      </form>
+
+      <p className="text-xs text-gray-600 mt-4">
+        We respect your privacy. No spam ever.
+      </p>
+    </div>
+  );
+};
+
+export default NewsLetter;

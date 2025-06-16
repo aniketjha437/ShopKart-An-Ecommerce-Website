@@ -1,28 +1,52 @@
-import React from 'react'
-import { assets } from '../assets/assets'
+import React from "react";
+import { assets } from "../assets/assets";
+import Title from "./Title";
 
 const OurPolicy = () => {
   return (
-    <div className='flex flex-col sm:flex-row justify-around gap-12 sm:gap-2 text-center py-20 text-xs sm:text-sm md:text-base text-gray-700'>
-      
-      <div>
-        <img src={assets.exchange_icon} className='w-12 m-auto mb-5' alt="" />
-        <p className=' font-semibold'>Easy Exchange Policy</p>
-        <p className=' text-gray-400'>We offer hassle free  exchange policy</p>
+    <div className="bg-sky-200 ">
+      <div className="pt-5 border-2 text-2xl">
+        <Title text1="Our" text2="Policy" />
       </div>
-      <div>
-        <img src={assets.quality_icon} className='w-12 m-auto mb-5' alt="" />
-        <p className=' font-semibold'>7 Days Return Policy</p>
-        <p className=' text-gray-400'>We provide 7 days free return policy</p>
-      </div>
-      <div>
-        <img src={assets.support_img} className='w-12 m-auto mb-5' alt="" />
-        <p className=' font-semibold'>Best customer support</p>
-        <p className=' text-gray-400'>we provide 24/7 customer support</p>
-      </div>
+      <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-12 p-4">
+        <div className="flex flex-col items-center justify-center p-4 text-center">
+          <img
+            src={assets.exchange_icon}
+            alt="Exchange Policy"
+            className="mb-4 w-16"
+          />
+          <p className="font-semibold text-lg">Easy Exchange</p>
+          <p className="text-gray-700 text-sm">
+            Exchange any product within 7 days—quick and simple!
+          </p>
+        </div>
 
+        <div className=" flex flex-col items-center justify-center p-4 text-center">
+          <img
+            src={assets.quality_icon}
+            alt="Quality Assurance"
+            className="mb-4 w-16"
+          />
+          <p className="font-semibold text-lg">Quality Assurance</p>
+          <p className="text-gray-700 text-sm">
+            Every item is quality checked to ensure top standards.
+          </p>
+        </div>
+
+        <div className=" flex flex-col items-center justify-center p-4 text-center">
+          <img
+            src={assets.support_img}
+            alt="Customer Support"
+            className="mb-4 w-16"
+          />
+          <p className="font-semibold text-lg">24/7 Support</p>
+          <p className="text-gray-700 text-sm">
+            Our support team is always here to help—day or night.
+          </p>
+        </div>
+      </div>
     </div>
-  )
-}
+  );
+};
 
-export default OurPolicy
+export default OurPolicy;
